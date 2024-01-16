@@ -26,7 +26,7 @@ export function Hero() {
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
               <Location />
-              <p>Ahmedabad, India</p>
+              <p>Ulaanbaatar, Mongolia</p>
             </div>
             <div className="flex gap-2">
               <Dot />
