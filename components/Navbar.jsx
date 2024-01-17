@@ -1,25 +1,23 @@
 import { Logo } from "./icons/Logo";
-import { Menu } from "./icons/Menu";
-import { Mode } from "./icons/Mode";
+import { Menu } from "./Menu";
+import { MenuIcon } from "./icons/MenuIcon";
 
 export function Navbar() {
+  const menuItems = [
+    { label: "About", link: "/about" },
+    { label: "Work", link: "/work" },
+    { label: "Testimonials", link: "/testimonials" },
+    { label: "Contact", link: "/contact" },
+  ];
+
   return (
-    <div className="md:px-10 lg:px-20">
-      <div className="flex py-2 justify-between items-center ">
+    <div className="py-4 px-4 md:px-10 lg:px-20">
+      <div className="flex justify-between items-center ">
         <Logo />
         <div className="sm:flex md:hidden">
-          <Menu />
+          <MenuIcon />
         </div>
-        <div className="hidden md:flex items-center gap-5 text-slate-800">
-          <a href="">About</a>
-          <a href="">Work</a>
-          <a href="">Testimonials</a>
-          <a href="">Contact</a>
-          <Mode />
-          <button className="bg-slate-900 text-white rounded-lg px-4 py-2">
-            Download CV
-          </button>
-        </div>
+        <Menu items={menuItems} />
       </div>
     </div>
   );
