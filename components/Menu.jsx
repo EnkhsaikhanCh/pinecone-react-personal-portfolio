@@ -10,7 +10,7 @@ export function Menu({ items }) {
     <>
       <div className="hidden md:flex items-center gap-5 text-slate-800 ">
         {items.map((item) => (
-          <a key={item.id} href="{item.link}">
+          <a key={item.id} href={item.link}>
             {item.label}
           </a>
         ))}
@@ -40,9 +40,9 @@ function MobileMenu({ items }) {
       <button className="sm:flex md:hidden" onClick={openMenu}>
         <MenuIcon />
       </button>
-      {visible && <div className="fixed inset-0 bg-gray-200"></div>}
+      {visible && <div className="fixed inset-0 bg-gray-200/70"></div>}
       <div
-        className={`fixed flex flex-col bg-white top-0 bottom-0 w-3/4 sm:w-1/2 transition-all ${
+        className={`fixed flex flex-col bg-white top-0 bottom-0 w-2/3 sm:w-2/5 transition-all ${
           visible ? "right-0" : "-right-full"
         } `}
       >
@@ -56,7 +56,7 @@ function MobileMenu({ items }) {
           <div className="flex flex-col  text-slate-800">
             <div className="flex flex-col gap-5 text-slate-800  p-4 border-b border-slate-200">
               {items.map((item) => (
-                <a key={item.id} href="{item.link}">
+                <a key={item.id} href={item.link}>
                   {item.label}
                 </a>
               ))}

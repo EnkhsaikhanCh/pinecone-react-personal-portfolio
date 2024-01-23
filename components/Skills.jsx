@@ -1,5 +1,4 @@
 import { Chip } from "./Chip";
-import { LogoData } from "@/data/LogoData";
 import { LogoUI } from "./UI/LogoUI";
 
 export function Skills() {
