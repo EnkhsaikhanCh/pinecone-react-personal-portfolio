@@ -1,34 +1,43 @@
 import { Chip } from "./Chip";
+import { WorkData } from "@/data/WorkData";
 
-export function Work() {
+export const Work = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-5 py-16 px-4">
       <Chip label={"Work"} />
-      <div>
-        {/* Box 1 */}
-        <div className="shadow-md rounded-[12px] md:grid md:grid-cols-2 lg:w-[896px] lg:h-[480px]">
-          {/* image */}
-          <div className="p-[32px] bg-[#F9FAFB] rounded-t-[12px] flex justify-center items-center  ">
-            <div className="bg-[url('/images/Picture.svg')] min-h-[192px] min-w-[279px]  bg-no-repeat bg-cover"></div>
+      {WorkData.map((work, id) => (
+        <WorkCard key={id} {...work} />
+      ))}
+    </div>
+  );
+};
+
+const WorkCard = (props) => {
+  const { image, title, description, labels, label, link } = props;
+
+  return (
+    <div>
+      <div className="shadow-md rounded-[12px] md:grid md:grid-cols-2">
+        {/* image */}
+        <div className=" bg-[#F9FAFB] rounded-[12px] flex justify-center items-center">
+          <img
+            className="object-fill h-full w-full rounded-[12px] p-[32px]"
+            src={image}
+            alt=""
+          />
+        </div>
+        {/* Content */}
+        <div className="flex flex-col gap-[24px] p-[32px] md:flex-1">
+          <h1>{title}</h1>
+          <p>{description}</p>
+          <div className="flex flex-wrap gap-[8px]">
+            <Chip label={labels.label} />
           </div>
-          {/* Content */}
-          <div className="flex flex-col gap-[24px] p-[32px] md:flex-1">
-            <h1>Fiskil</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia curae.
-            </p>
-            <div className="flex flex-wrap gap-[8px]">
-              <Chip label={"React"} />
-              <Chip label={"React"} />
-              <Chip label={"React"} />
-              <Chip label={"React"} />
-              <Chip label={"React"} />
-            </div>
-          </div>
+          <a href={link}>
+            <img src="/images/icon.svg" alt="" />
+          </a>
         </div>
       </div>
     </div>
   );
-}
+};
