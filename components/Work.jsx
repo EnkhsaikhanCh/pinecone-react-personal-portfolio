@@ -3,7 +3,7 @@ import { WorkData } from "@/data/WorkData";
 
 export const Work = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-[24px] md:gap-[48px] py-16 px-4 container mx-auto">
+    <div className="container mx-auto flex flex-col items-center justify-center gap-[24px] px-4 py-16 md:gap-[48px]">
       <Chip label={"Work"} />
       {WorkData.map((work, id) => (
         <WorkCard key={id} {...work} />
@@ -17,11 +17,11 @@ const WorkCard = (props) => {
 
   return (
     <div>
-      <div className="shadow-md rounded-[12px] md:grid md:grid-cols-2">
+      <div className="rounded-[12px] shadow-md md:grid md:grid-cols-2">
         {/* image */}
-        <div className=" bg-[#F9FAFB] rounded-[12px] flex justify-center items-center">
+        <div className=" flex items-center justify-center rounded-[12px] bg-[#F9FAFB]">
           <img
-            className="object-fill h-full w-full rounded-[12px] p-[32px]"
+            className="h-full w-full rounded-[12px] object-fill p-[32px]"
             src={image}
             alt=""
           />
@@ -34,7 +34,7 @@ const WorkCard = (props) => {
             <Chip label={labels.label} />
           </div>
           <a href={link}>
-            <img src="/images/icon.svg" alt="" />
+            <img src="/iconSVG/icon-link.svg" alt="" />
           </a>
         </div>
       </div>
