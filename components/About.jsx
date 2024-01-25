@@ -2,19 +2,19 @@ import { Chip } from "./Chip";
 
 export function About() {
   return (
-    <div className="flex flex-col items-center justify-center py-16 px-4  lg:py-24 lg:px-20 gap-10 bg-gray-50 ">
+    <div className="flex flex-col items-center justify-center gap-10 bg-gray-50  px-4 py-16 lg:px-20 lg:py-24 ">
       <Chip label={"About me"} />
       <div className="container mx-auto">
         <div className="flex flex-col gap-4 md:flex-row">
-          <div className="flex flex-1 justify-center items-center">
+          <div className="flex flex-1 items-center justify-center">
             <img
-              className="rounded-lg size-96 object-cover"
+              className="size-96 rounded-lg object-cover"
               src="/images/photo1.jpg"
               alt="photo1"
             />
           </div>
           <div className="flex flex-1 flex-col gap-5 text-justify">
-            <h2 className="font-semibold text-2xl">
+            <h2 className="text-2xl font-semibold">
               Curious about me? Here you have it:
             </h2>
             <div className="flex flex-col gap-3 text-gray-600">
@@ -47,7 +47,7 @@ export function About() {
                 you can follow me on GitHub.
               </p>
               <p>Finally, some quick bits about me.</p>
-              <div className="md:grid md:grid-cols-2 gap-4">
+              <div className="gap-4 md:grid md:grid-cols-2">
                 <div>
                   <p>- B.E. in Computer Engineering</p>
                   <p>- Full time freelancer</p>

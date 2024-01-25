@@ -11,12 +11,12 @@ import { HeroData } from "@/data/HeroData";
 
 export function Hero() {
   return (
-    <div className="flex flex-col py-16 px-4 lg:py-24 lg:px-20 container mx-auto">
-      <div className="flex flex-col sm:flex-row gap-10">
+    <div className="container mx-auto flex flex-col px-4 py-16 lg:px-20 lg:py-24">
+      <div className="flex flex-col gap-10 sm:flex-row">
         {/* Image */}
-        <div className="sm:order-2 flex justify-center items-center sm:flex-1  ">
+        <div className="flex items-center justify-center sm:order-2 sm:flex-1  ">
           <img
-            className="rounded-lg size-96 object-cover"
+            className="size-96 rounded-lg object-cover"
             src="/images/profile.jpg"
             alt="portrait"
           />

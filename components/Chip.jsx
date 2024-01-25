@@ -2,7 +2,7 @@ export function Chip(props) {
   const { label } = props;
   return (
     <div className="">
-      <div className="bg-gray-200 text-gray-600 flex justify-center items-center w-full px-4 py-2 rounded-xl">
+      <div className="flex w-full items-center justify-center rounded-xl bg-gray-200 px-4 py-2 text-gray-600">
         {label}
       </div>
     </div>

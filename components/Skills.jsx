@@ -3,8 +3,8 @@ import { LogoUI } from "./UI/LogoUI";
 
 export function Skills() {
   return (
-    <div className="flex flex-col  py-16 px-4 lg:py-24 lg:px-20 container mx-auto">
-      <div className="flex flex-col justify-center items-center gap-6">
+    <div className="container mx-auto  flex flex-col px-4 py-16 lg:px-20 lg:py-24">
+      <div className="flex flex-col items-center justify-center gap-6">
         <Chip label="Skills" />
         <div>
           <p>The skills, tools and technologies I am really good at:</p>
