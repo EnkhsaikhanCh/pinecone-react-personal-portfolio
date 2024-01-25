@@ -3,7 +3,7 @@ import { ExperienceData } from "@/data/ExperienceData";
 
 export const Experience = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-5 py-16 px-4">
+    <div className="flex flex-col justify-center items-center gap-5 py-16 px-4 bg-gray-50">
       <Chip label={"Experience"} />
       <div className="flex flex-col gap-5">
         <p>Here is a quick summary of my most recent experiences:</p>
@@ -21,7 +21,7 @@ const ExperienceCard = (props) => {
   return (
     <div
       key={id}
-      className="flex flex-col gap-4 p-8 rounded-xl bg-[#F9FAFB] shadow-lg shadow-slate-200 lg:w-[896px] md:grid md:grid-cols-4 md:gap-[20px] "
+      className="flex flex-col gap-4 p-8 rounded-xl bg-white shadow-lg shadow-slate-200 lg:w-[896px] md:grid md:grid-cols-4 md:gap-[20px] "
     >
       <img className="h-[28px] w-[102px] order-1 " src={logo} alt={name} />
       <p className="order-2 md:order-3 flex md:justify-end text-[#374151]">

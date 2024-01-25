@@ -3,7 +3,7 @@ import { WorkData } from "@/data/WorkData";
 
 export const Work = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-5 py-16 px-4">
+    <div className="flex flex-col justify-center items-center gap-[24px] md:gap-[48px] py-16 px-4 container mx-auto">
       <Chip label={"Work"} />
       {WorkData.map((work, id) => (
         <WorkCard key={id} {...work} />

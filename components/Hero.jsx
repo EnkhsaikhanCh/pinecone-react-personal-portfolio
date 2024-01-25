@@ -11,7 +11,7 @@ import { HeroData } from "@/data/HeroData";
 
 export function Hero() {
   return (
-    <div className="flex flex-col py-16 px-4 lg:py-24 lg:px-20">
+    <div className="flex flex-col py-16 px-4 lg:py-24 lg:px-20 container mx-auto">
       <div className="flex flex-col sm:flex-row gap-10">
         {/* Image */}
         <div className="sm:order-2 flex justify-center items-center sm:flex-1  ">
