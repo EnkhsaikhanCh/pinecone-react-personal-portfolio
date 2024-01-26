@@ -1,21 +1,21 @@
-import { Mode } from "./icons/Mode";
-import { MenuIcon } from "./icons/MenuIcon";
-import { CloseIcon } from "./icons/closeIcon";
+import { MenuIcon } from "./icons/Menu_icon";
+import { CloseIcon } from "./icons/Close_icon";
 import { Logo } from "./icons/Logo";
 import { useState } from "react";
 import { MenuData } from "@/data/MenuData";
+import { ThemeChanger } from "./ThemeChanger";
 
 export function Menu({ items }) {
   return (
     <>
-      <div className="hidden items-center gap-5 text-slate-800 md:flex ">
+      <div className="hidden items-center gap-5 text-slate-800 md:flex dark:text-[#D1D5DB]">
         {items.map((item) => (
           <a key={item.id} href={item.link}>
             {item.label}
           </a>
         ))}
-        <Mode />
-        <button className="rounded-lg bg-slate-900 px-4 py-2 text-white hover:bg-sky-500">
+        <ThemeChanger />
+        <button className="rounded-lg bg-sky-500 px-4 py-2 text-white hover:bg-sky-600 dark:bg-cyan-600 dark:hover:bg-cyan-700">
           Download CV
         </button>
       </div>
@@ -42,11 +42,11 @@ function MobileMenu({ items }) {
       </button>
       {visible && <div className="fixed inset-0 bg-gray-200/70"></div>}
       <div
-        className={`fixed bottom-0 top-0 flex w-2/3 flex-col bg-white transition-all sm:w-2/5 ${
+        className={`fixed bottom-0 top-0 flex w-2/3 flex-col bg-white transition-all sm:w-2/5 dark:bg-[#2a303c] ${
           visible ? "right-0" : "-right-full"
         } `}
       >
-        <div className="flex justify-between border-b border-slate-200 p-4">
+        <div className="flex justify-between border-b border-slate-200 p-4 dark:border-[#1F2937]">
           <Logo />
           <button onClick={closeMenu}>
             <CloseIcon />
@@ -54,7 +54,7 @@ function MobileMenu({ items }) {
         </div>
         <div>
           <div className="flex flex-col  text-slate-800">
-            <div className="flex flex-col gap-5 border-b  border-slate-200 p-4 text-slate-800">
+            <div className="flex flex-col gap-5 border-b  border-slate-200 p-4 text-slate-800 dark:border-[#1F2937] dark:text-[#D1D5DB]">
               {items.map((item) => (
                 <a key={item.id} href={item.link}>
                   {item.label}
@@ -62,9 +62,9 @@ function MobileMenu({ items }) {
               ))}
             </div>
             <div className="flex flex-col items-center justify-between gap-4 p-4">
-              <div className="flex w-full items-center justify-between">
+              <div className="flex w-full items-center justify-between dark:text-[#D1D5DB]">
                 <p>Switch Theme</p>
-                <Mode />
+                <ThemeChanger />
               </div>
               <div className="w-full">
                 <button className="w-full rounded-lg bg-slate-900 px-4 py-2 text-white hover:bg-sky-500">

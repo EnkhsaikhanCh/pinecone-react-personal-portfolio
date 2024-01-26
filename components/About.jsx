@@ -2,7 +2,7 @@ import { Chip } from "./Chip";
 
 export function About() {
   return (
-    <div className="flex flex-col items-center justify-center gap-10 bg-gray-50  px-4 py-16 lg:px-20 lg:py-24 ">
+    <div className="flex flex-col items-center justify-center gap-10 bg-gray-50  px-4 py-16 lg:px-20 lg:py-24 dark:bg-[#242933]">
       <Chip label={"About me"} />
       <div className="container mx-auto">
         <div className="flex flex-col gap-4 md:flex-row">
@@ -14,10 +14,10 @@ export function About() {
             />
           </div>
           <div className="flex flex-1 flex-col gap-5 text-justify">
-            <h2 className="text-2xl font-semibold">
+            <h2 className="text-2xl font-semibold dark:text-white">
               Curious about me? Here you have it:
             </h2>
-            <div className="flex flex-col gap-3 text-gray-600">
+            <div className="flex flex-col gap-3 text-gray-600 dark:text-[#D1D5DB]">
               <p>
                 I'm a passionate, self-proclaimed designer who specializes in
                 full stack development (React.js & Node.js). I am very
