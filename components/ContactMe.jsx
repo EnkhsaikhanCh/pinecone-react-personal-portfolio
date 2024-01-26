@@ -17,26 +17,26 @@ export function ContactMe() {
         <p className="flex items-center justify-center">
           <img
             className="p-[6px] lg:h-[38px] lg:w-[38px]"
-            src="/iconSVG/icon-email.svg"
+            src="/images/icon-email.svg"
             alt=""
           />
           reachsagarshah@gmail.com
           <img
             className="p-[6px] lg:h-[38px] lg:w-[38px]"
-            src="/iconSVG/icon-copy.svg"
+            src="/images/icon-copy.svg"
             alt=""
           />
         </p>
         <p className="flex items-center justify-center gap-[16px]">
           <img
             className="p-[6px] lg:h-[38px] lg:w-[38px]"
-            src="/iconSVG/icon-phone.svg"
+            src="/images/icon-phone.svg"
             alt=""
           />
           +91 8980500565
           <img
             className="p-[6px] lg:h-[38px] lg:w-[38px]"
-            src="/iconSVG/icon-copy.svg"
+            src="/images/icon-copy.svg"
             alt=""
           />
         </p>
