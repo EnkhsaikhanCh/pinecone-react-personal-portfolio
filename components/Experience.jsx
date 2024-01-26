@@ -5,7 +5,7 @@ export const Experience = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-5 bg-gray-50 px-4 py-16">
       <Chip label={"Experience"} />
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 text-center">
         <p>Here is a quick summary of my most recent experiences:</p>
       </div>
       {ExperienceData.map((card, id) => (
