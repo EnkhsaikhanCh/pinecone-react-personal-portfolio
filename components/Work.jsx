@@ -30,7 +30,7 @@ const WorkCard = (props) => {
           />
         </div>
         {/* Content */}
-        <div className="flex flex-col gap-[24px] rounded-[12px] p-[32px] md:flex-1 dark:bg-[#242934]">
+        <div className="flex flex-col gap-[24px] rounded-[12px] p-[32px] dark:bg-[#242934] md:flex-1">
           <h1 className="dark:text-[#F9FAFB]">{title}</h1>
           <p className="dark:text-[#D1D5DB]">{description}</p>
           <div className="flex flex-wrap gap-[8px]">

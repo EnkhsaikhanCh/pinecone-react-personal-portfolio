@@ -21,10 +21,10 @@ const ExperienceCard = (props) => {
   return (
     <div
       key={id}
-      className="flex flex-col gap-4 rounded-xl bg-white p-8 shadow-lg shadow-slate-200 md:grid md:grid-cols-4 md:gap-[20px] lg:w-[896px] dark:bg-[#2a303c] dark:shadow-[0_25px_25px_0_rgba(0,0,0,0.15)]"
+      className="flex flex-col gap-4 rounded-xl bg-white p-8 shadow-lg shadow-slate-200 dark:bg-[#2a303c] dark:shadow-[0_25px_25px_0_rgba(0,0,0,0.15)] md:grid md:grid-cols-4 md:gap-[20px] lg:w-[896px]"
     >
       <img className="order-1 h-[28px] w-[102px] " src={logo} alt={name} />
-      <p className="order-2 flex text-[#374151] md:order-3 md:justify-end dark:text-[#E5E7EB]">
+      <p className="order-2 flex text-[#374151] dark:text-[#E5E7EB] md:order-3 md:justify-end">
         {when}
       </p>
       <div className="order-2 col-span-2 flex flex-col gap-4">

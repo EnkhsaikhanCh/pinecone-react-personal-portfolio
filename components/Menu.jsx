@@ -8,7 +8,7 @@ import { ThemeChanger } from "./ThemeChanger";
 export function Menu({ items }) {
   return (
     <>
-      <div className="hidden items-center gap-5 text-slate-800 md:flex dark:text-[#D1D5DB]">
+      <div className="hidden items-center gap-5 text-slate-800 dark:text-[#D1D5DB] md:flex">
         {items.map((item) => (
           <a key={item.id} href={item.link}>
             {item.label}
@@ -42,7 +42,7 @@ function MobileMenu({ items }) {
       </button>
       {visible && <div className="fixed inset-0 bg-gray-200/70"></div>}
       <div
-        className={`fixed bottom-0 top-0 flex w-2/3 flex-col bg-white transition-all sm:w-2/5 dark:bg-[#2a303c] ${
+        className={`fixed bottom-0 top-0 flex w-2/3 flex-col bg-white transition-all dark:bg-[#2a303c] sm:w-2/5 ${
           visible ? "right-0" : "-right-full"
         } `}
       >

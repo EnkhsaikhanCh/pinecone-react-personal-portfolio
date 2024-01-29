@@ -2,7 +2,7 @@ import { Chip } from "./Chip";
 
 export function About() {
   return (
-    <div className="flex flex-col items-center justify-center gap-10 bg-gray-50  px-4 py-16 lg:px-20 lg:py-24 dark:bg-[#242933]">
+    <div className="flex flex-col items-center justify-center gap-10 bg-gray-50  px-4 py-16 dark:bg-[#242933] lg:px-20 lg:py-24">
       <Chip label={"About me"} />
       <div className="container mx-auto">
         <div className="flex flex-col gap-4 md:flex-row">
