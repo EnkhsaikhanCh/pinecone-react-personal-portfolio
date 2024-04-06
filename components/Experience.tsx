@@ -1,5 +1,14 @@
+import { ExperienceData } from "../data/ExperienceData";
 import { Chip } from "./Chip";
-import { ExperienceData } from "@/data/ExperienceData";
+
+interface ExperienceItem {
+  id: number;
+  logo: string;
+  name: string;
+  position: string;
+  when: string;
+  note: string;
+}
 
 export const Experience = () => {
   return (
@@ -8,22 +17,23 @@ export const Experience = () => {
       <div className="flex flex-col gap-5 text-center dark:text-[#D1D5DB]">
         <p>Here is a quick summary of my most recent experiences:</p>
       </div>
-      {ExperienceData.map((card, id) => (
-        <ExperienceCard key={id} {...card} />
+      {ExperienceData.map((card) => (
+        <ExperienceCard key={card.id} {...card} />
       ))}
     </div>
   );
 };
 
-const ExperienceCard = (props) => {
+const ExperienceCard = (props: ExperienceItem) => {
   const { id, logo, name, position, when, note } = props;
 
   return (
-    <div
-      key={id}
-      className="flex flex-col gap-4 rounded-xl bg-white p-8 shadow-lg shadow-slate-200 dark:bg-[#2a303c] dark:shadow-[0_25px_25px_0_rgba(0,0,0,0.15)] md:grid md:grid-cols-4 md:gap-[20px] lg:w-[896px]"
-    >
-      <img className="order-1 h-[28px] w-[102px] " src={logo} alt={name} />
+    <div className="flex flex-col gap-4 rounded-xl bg-white p-8 shadow-lg shadow-slate-200 dark:bg-[#2a303c] dark:shadow-[0_25px_25px_0_rgba(0,0,0,0.15)] md:grid md:grid-cols-4 md:gap-[20px] lg:w-[896px]">
+      <img
+        className="order-1 h-[28px] w-[102px]"
+        src={logo}
+        alt={`${name} logo`}
+      />
       <p className="order-2 flex text-[#374151] dark:text-[#E5E7EB] md:order-3 md:justify-end">
         {when}
       </p>
